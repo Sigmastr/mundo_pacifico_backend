@@ -20,7 +20,6 @@ class Calles extends Migration
             $table->unsignedBigInteger('id_ciudad');
 
             $table->foreign('id_ciudad')->references('id')->on('ciudades');
-            $table->timestamps();
         });
     }
 

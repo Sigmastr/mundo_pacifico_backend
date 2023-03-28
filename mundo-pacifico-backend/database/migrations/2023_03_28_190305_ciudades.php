@@ -18,7 +18,6 @@ class Ciudades extends Migration
             $table->string('nombre');
             $table->unsignedBigInteger('id_provincia');
             $table->foreign('id_provincia')->references('id')->on('provincias');
-            $table->timestamps();
         });
     }
 

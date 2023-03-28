@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\region;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class regionSeeder extends Seeder
+class provinciaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,23 +15,21 @@ class regionSeeder extends Seeder
     public function run()
     {
         //
-
-        $regions = [
+        $now = now();
+        $provincia = [
             [
-                'nombre' => 'Bío-Bío',
-
-            ],
-            [
-                'nombre' => 'Ñuble',
+                'nombre' => 'Concepción',
+                'id_region' => 1,
 
             ],
             [
-                'nombre' => 'Valparaiso',
+                'nombre' => 'Itata',
+                'id_region' =>
+                1,
 
             ],
 
         ];
-
-        DB::table('regiones')->insert($regions);
+        DB::table('provincias')->insert($provincia);
     }
 }

@@ -17,8 +17,6 @@ class Regiones extends Migration
         Schema::create('regiones', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->string('sigla');
-            $table->timestamps();
         });
     }
 

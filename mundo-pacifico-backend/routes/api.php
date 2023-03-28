@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\calleController;
+use App\Http\Controllers\ciudadController;
 use App\Http\Controllers\regionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,10 +18,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('/regiones')->group(function () {
-    Route::post("/create", [regionController::class, 'agregarRegion']);
+
     Route::get('/get/{id}', [regionController::class, 'mostrarRegion']);
 });
 Route::prefix('/provincia')->group(function () {
-    Route::post("/create", [regionController::class, 'agregarRegion']);
+
     Route::get('/get/{id}', [regionController::class, 'mostrarRegion']);
+});
+
+Route::prefix('/ciudad')->group(function () {
+
+    Route::get('/get/{id}', [ciudadController::class, 'mostrarCiudad']);
+});
+
+Route::prefix('/calle')->group(function () {
+
+    Route::get('/get/{id}', [calleController::class, 'mostrarCalle']);
 });

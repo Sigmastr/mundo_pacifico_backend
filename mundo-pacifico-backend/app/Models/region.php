@@ -13,7 +13,7 @@ class region extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'nombre',
-        'sigla',
+
     ];
 
     public function provincia()
