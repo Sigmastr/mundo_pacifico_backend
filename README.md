@@ -18,7 +18,7 @@ Posteriormente, ingresar los siguientes comandos
 
 Una vez realizado estos pasos, continuaremos con la configuración de la base de datos.
 
-#Configuración de la Base de Datos
+# Configuración de la Base de Datos
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -29,7 +29,7 @@ DB_PASSWORD=
 
 Con esto termina la configuración.
 
-#Puesta en marcha de la API
+# Puesta en marcha de la API
 
 En la terminal, realizar las migraciones
 
