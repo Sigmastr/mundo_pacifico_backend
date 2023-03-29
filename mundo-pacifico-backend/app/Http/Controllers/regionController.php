@@ -20,12 +20,12 @@ class regionController extends Controller
         return response()->json($region, 201);
     }
 
-    public function mostrarRegion($id)
+    public function mostrarRegion()
     {
-        $region = region::find($id);
-        if (!$region) {
-            return response()->json(['mensaje' => 'No se ha encontrado la región'], 404);
+        try {
+            return region::all();
+        } catch (Exception $e) {
+            Log::error(['error' => $e->getMessage(), 'linea' => $e->getLine(), 'file' => $e->getFile(), 'metodo' => 'mostrar región']);
         }
-        return response()->json($region, 200);
     }
 }
