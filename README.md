@@ -37,10 +37,12 @@ Con esto termina la configuración.
 # Puesta en marcha de la API
 
 En la terminal, realizar las migraciones
-
-Luego ejecutar los Seeders
 ```
 -php artisan migrate:fresh
+```
+Luego ejecutar los Seeders
+```
+
 -php artisan db:seed
 ```
 
