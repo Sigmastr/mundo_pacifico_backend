@@ -15,9 +15,4 @@ class region extends Model
         'nombre',
 
     ];
-
-    public function provincia()
-    {
-        return $this->belongsTo(provincia::class, 'id_region');
-    }
 }

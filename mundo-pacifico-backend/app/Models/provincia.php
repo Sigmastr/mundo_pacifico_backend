@@ -15,8 +15,4 @@ class provincia extends Model
         'nombre',
         'id_region'
     ];
-    public function region()
-    {
-        return $this->hasMany(region::class, 'id_region');
-    }
 }
