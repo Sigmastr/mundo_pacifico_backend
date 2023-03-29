@@ -1,7 +1,9 @@
 # Backend prueba técnica Mundo
 
 # Requisitos
+```
 - xampp
+```
 
 Clonar este repositorio en la carpeta "C:/xampp/htdocs"
 - Realizar cd .\mundo_pacifico_backend\
@@ -19,14 +21,14 @@ Posteriormente, ingresar los siguientes comandos
 Una vez realizado estos pasos, continuaremos con la configuración de la base de datos.
 
 # Configuración de la Base de Datos
-
+```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=mundo_pacifico_tecnica
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
 Con esto termina la configuración.
 
 # Puesta en marcha de la API
