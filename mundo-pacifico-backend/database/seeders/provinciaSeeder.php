@@ -28,6 +28,13 @@ class provinciaSeeder extends Seeder
                 1,
 
             ],
+            [
+                'nombre' => 'Valparaiso',
+                'id_region' =>
+                3,
+
+            ],
+
 
         ];
         DB::table('provincias')->insert($provincia);

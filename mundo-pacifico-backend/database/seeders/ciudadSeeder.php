@@ -36,7 +36,13 @@ class ciudadSeeder extends Seeder
             [
                 'nombre' => 'Cobquecura', 'id_provincia' => 2,
 
-            ]
+            ],
+            [
+                'nombre' => 'Valparaíso', 'id_provincia' => 2,
+
+            ],
+            ['nombre' => 'Isla de Pascua', 'id_provincia' =>  3],
+            ['nombre' => 'Calle Larga', 'id_provincia' => 3],
         ];
         DB::table('ciudades')->insert($ciudades);
     }

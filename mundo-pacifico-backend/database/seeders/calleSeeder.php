@@ -21,7 +21,10 @@ class calleSeeder extends Seeder
             ['nombre' => 'Nicolas Perez', 'id_ciudad' => 2],
             ['nombre' => 'Gabriela Mistral', 'id_ciudad' => 3],
             ['nombre' => 'Nelson', 'id_ciudad' => 4],
-            ['nombre' => 'Calle calle', 'id_ciudad' => 5]
+            ['nombre' => 'Calle calle', 'id_ciudad' => 5],
+            ['nombre' => 'Valpa valpa', 'id_ciudad' => 7],
+            ['nombre' => 'ChiguaValpa', 'id_ciudad' => 7],
+
         ];
 
         DB::table('calles')->insert($calles);
