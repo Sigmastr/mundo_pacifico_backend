@@ -1,0 +1,24 @@
+->join('ciudades', 'ciudades.id', '=', 'calles.id_ciudad')
+                            ->where('id_ciudad', '=', $id_ciudad)
+                            ->join('provincias', 'provincias.id', '=', 'ciudades.id_provincia')
+                            ->where('id_provincia', '=', $id_provincia)
+                            ->join('regiones', 'regiones.id', '=', 'provincias.id_region')
+                            ->where('id_region', '=', $id_region)
+                            ->select('calles.nombre')
+
+
+
+
+                             // $resultado = DB::table('calles')
+                // ->when('id_region', function ($query) use ($id_region) {
+                //     return $query->join('ciudades', 'ciudades.id', '=', 'calles.id_ciudad')
+                //         // ->where('regiones.id', '=', $id_region)
+                //         ->join('provincias', 'provincias.id', '=', 'ciudades.id_provincia')
+                //         ->join('regiones', 'regiones.id', '=', 'provincias.id')
+                //         ->where('regiones.id', '=', $id_region)
+                //         ->select('calles.nombre')
+                //         ->groupBy('calles.nombre')
+                //         ->havingRaw('COUNT(calles.id) >= 1');
+                // })
+
+                // ->get();

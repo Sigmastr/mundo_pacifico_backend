@@ -27,19 +27,26 @@ class calleController extends Controller
             $id_region = $request->input('id_region');
             $id_provincia = $request->input('id_provincia');
             $id_ciudad = $request->input('id_ciudad');
-            $resultado = DB::table('calles')
-                ->when('id_region', function ($query) use ($id_region) {
-                    return $query->join('regiones', 'regiones.id', '=', 'calles.id')
-                        ->where('regiones.id', '=', $id_region)
-                        ->join('provincias', 'provincias.id', '=', 'regiones.id')
-                        ->join('ciudades', 'ciudades.id_provincia', '=', 'provincias.id')
-
-                        ->select('calles.nombre')
-                        ->groupBy('calles.nombre')
+            return  DB::table('calles')
+                ->when($id_region != null || $id_provincia != null || $id_ciudad != null, function ($query) use ($id_region, $id_provincia, $id_ciudad) {
+                    return $query->join('ciudades', 'calles.id_ciudad', '=', 'ciudades.id')
+                        ->join('provincias', 'ciudades.id_provincia', '=', 'provincias.id')
+                        ->join('regiones', 'provincias.id_region', '=', 'regiones.id')
+                        ->when($id_ciudad, function ($query) use ($id_ciudad) {
+                            return $query->where('calles.id_ciudad', '=', $id_ciudad);
+                        })
+                        ->when($id_provincia, function ($query) use ($id_provincia) {
+                            return $query->where('ciudades.id_provincia', '=', $id_provincia);
+                        })
+                        ->when($id_region, function ($query) use ($id_region) {
+                            return $query->where('provincias.id_region', '=', $id_region);
+                        })
+                        ->select('calles.nombre', 'calles.id')
+                        ->orderBy('calles.id')
+                        ->groupBy('calles.nombre', 'calles.id')
                         ->havingRaw('COUNT(calles.id) >= 1');
                 })
                 ->get();
-            return $resultado;
         } catch (\Throwable $e) {
             Log::error(['error' => $e->getMessage(), 'linea' => $e->getLine(), 'file' => $e->getFile(), 'metodo' => 'mostrar todas las calles']);
         }
