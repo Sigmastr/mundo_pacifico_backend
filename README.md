@@ -42,7 +42,6 @@ En la terminal, realizar las migraciones
 ```
 Luego ejecutar los Seeders
 ```
-
 -php artisan db:seed
 ```
 
