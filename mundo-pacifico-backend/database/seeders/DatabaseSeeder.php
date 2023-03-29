@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        $this->call(regionSeeder::class);
+        $this->call(provinciaSeeder::class);
+        $this->call(ciudadSeeder::class);
+        $this->call(calleSeeder::class);
     }
 }
