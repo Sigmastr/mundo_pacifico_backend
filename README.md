@@ -23,7 +23,7 @@ Posteriormente, ingresar los siguientes comandos
 Una vez realizado estos pasos, continuaremos con la configuración de la base de datos.
 
 # Configuración de la Base de Datos
-Antes, se requiere ingresar a MySQL y crear la DB, la cual debe llamarse mundo_pacifico_tecnica
+Antes, se requiere ingresar a PhPMyAdmin y crear la DB, la cual debe llamarse mundo_pacifico_tecnica
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
