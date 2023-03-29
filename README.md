@@ -3,6 +3,8 @@
 # Requisitos
 ```
 - xampp
+- php 7.3.2
+- composer 2.4.4
 ```
 
 Clonar este repositorio en la carpeta "C:/xampp/htdocs"
