@@ -23,6 +23,7 @@ Posteriormente, ingresar los siguientes comandos
 Una vez realizado estos pasos, continuaremos con la configuración de la base de datos.
 
 # Configuración de la Base de Datos
+Antes, se requiere ingresar a PhPMyAdmin y crear la DB, la cual debe llamarse mundo_pacifico_tecnica
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -36,12 +37,14 @@ Con esto termina la configuración.
 # Puesta en marcha de la API
 
 En la terminal, realizar las migraciones
-
-Luego ejecutar los Seeders
 ```
 -php artisan migrate:fresh
+```
+Luego ejecutar los Seeders
+```
 -php artisan db:seed
 ```
+Para finalizar, en la consola ingresar el siguiente comando: php artisan server
 
 # ¿Con qué se realizó el proyecto?
 ```
