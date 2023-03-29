@@ -44,6 +44,7 @@ Luego ejecutar los Seeders
 ```
 -php artisan db:seed
 ```
+Para finalizar, en la consola ingresar el siguiente comando: php artisan server
 
 # ¿Con qué se realizó el proyecto?
 ```
