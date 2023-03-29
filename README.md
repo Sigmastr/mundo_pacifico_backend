@@ -36,9 +36,10 @@ Con esto termina la configuración.
 En la terminal, realizar las migraciones
 
 Luego ejecutar los Seeders
+```
 -php artisan migrate:fresh
 -php artisan db:seed
-
+```
 
 # ¿Con qué se realizó el proyecto?
 - php 7.3.2
