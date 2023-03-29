@@ -1,4 +1,4 @@
-# Backend prueba técnia Mundo
+# Backend prueba técnica Mundo
 
 # Requisitos
 - xampp
