@@ -38,7 +38,7 @@ Luego ejecutar los Seeders
 -php artisan db:seed
 
 
-#Requisitos
+# ¿Con qué se realizó el proyecto?
 - php 7.3.2
 - composer 2.4.4
 - Base de datos Mysql
